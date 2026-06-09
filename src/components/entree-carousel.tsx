@@ -173,7 +173,12 @@ export function EntreeCarousel({ entrees }: { entrees: Entree[] }) {
         return;
       }
 
-      scrollToCard((snapIndexRef.current + 1) % entrees.length);
+      const currentIndex = snapIndexRef.current;
+      const nextIndex = (currentIndex + 1) % entrees.length;
+      const direction =
+        currentIndex === entrees.length - 1 && nextIndex === 0 ? -1 : 1;
+
+      scrollToCard(nextIndex, direction);
     }, 7200);
 
     function updateActiveCard() {
@@ -330,11 +335,16 @@ export function EntreeCarousel({ entrees }: { entrees: Entree[] }) {
   }
 
   function scrollByCard(direction: 1 | -1) {
+    const currentIndex = snapIndexRef.current;
     const nextIndex =
-      (snapIndexRef.current + direction + entrees.length) % entrees.length;
+      (currentIndex + direction + entrees.length) % entrees.length;
+    const scrollDirection =
+      direction === 1 && currentIndex === entrees.length - 1 && nextIndex === 0
+        ? -1
+        : direction;
 
     pauseAutoScrollAfterManualNavigation();
-    scrollToCard(nextIndex, direction);
+    scrollToCard(nextIndex, scrollDirection);
   }
 
   return (
