@@ -17,6 +17,7 @@ import {
 import { AudioGuide, AudioGuidePlayButton } from "@/components/audio-guide";
 import { EntreeCarousel } from "@/components/entree-carousel";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -321,7 +322,12 @@ export default function Home() {
             {projects.map((project) => {
               const hasHref = "href" in project;
               const card = (
-                <Card className="audio-guide-card grid min-h-44 grid-cols-[1fr_2fr] overflow-hidden p-0 transition duration-200 ease-out group-hover:-translate-y-0.5 group-hover:border-foreground/20 group-hover:shadow-md">
+                <Card
+                  className={cn(
+                    "audio-guide-card grid min-h-44 grid-cols-[1fr_2fr] overflow-hidden p-0 transition duration-200 ease-out group-hover:-translate-y-0.5 group-hover:border-foreground/20 group-hover:shadow-md",
+                    hasHref ? "cursor-pointer" : null,
+                  )}
+                >
                   <div className="overflow-hidden">
                     <div
                       aria-hidden="true"
@@ -365,7 +371,7 @@ export default function Home() {
 
               return (
                 <a
-                  className="group block text-card-foreground no-underline outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="group block cursor-pointer text-card-foreground no-underline outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   data-audio-target={project.title}
                   href={project.href}
                   key={project.title}

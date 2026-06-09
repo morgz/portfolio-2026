@@ -408,6 +408,7 @@ export function EntreeCarousel({ entrees }: { entrees: Entree[] }) {
                 className={cn(
                   "flex min-h-60 w-[82vw] max-w-[22rem] shrink-0 scroll-mx-[var(--page-gutter)] snap-center flex-col justify-between overflow-hidden p-0 transition duration-300 ease-out sm:w-[22rem] lg:w-[28rem] lg:max-w-[28rem]",
                   "audio-guide-card",
+                  entree.href ? "cursor-pointer" : null,
                   isAudioGuideHighlight ? "audio-guide-highlight" : null,
                   isProminent
                     ? "scale-100 border-foreground/30 shadow-lg"
@@ -496,7 +497,7 @@ export function EntreeCarousel({ entrees }: { entrees: Entree[] }) {
             return (
               <a
                 aria-hidden={isDuplicate}
-                className="group block text-card-foreground no-underline outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="group block cursor-pointer text-card-foreground no-underline outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 href={entree.href}
                 key={`${entree.title}-${index}`}
                 onPointerEnter={() => {
