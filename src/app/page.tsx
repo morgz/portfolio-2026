@@ -247,7 +247,7 @@ export default function Home() {
             <a
               aria-label="Email"
               className={buttonVariants({ variant: "outline", size: "icon" })}
-              href="mailto:hello@example.com"
+              href="mailto:danmorgz@googlemail.com"
             >
               <Mail aria-hidden="true" />
             </a>
@@ -442,7 +442,7 @@ export default function Home() {
           <div className="flex gap-2">
             <a
               className={buttonVariants({ variant: "secondary", size: "icon" })}
-              href="mailto:hello@example.com"
+              href="mailto:danmorgz@googlemail.com"
               aria-label="Email"
             >
               <Mail aria-hidden="true" />
