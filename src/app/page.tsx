@@ -298,7 +298,7 @@ export default function Home() {
 
       <div aria-hidden="true">
         <div
-          className="border-t border-dashed"
+          className="border-t"
           style={{ borderColor: "var(--subtle-divider)" }}
         />
       </div>
@@ -394,7 +394,7 @@ export default function Home() {
 
       <div aria-hidden="true">
         <div
-          className="border-t border-dashed"
+          className="border-t"
           style={{ borderColor: "var(--subtle-divider)" }}
         />
       </div>
