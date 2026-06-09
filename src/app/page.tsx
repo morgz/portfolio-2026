@@ -46,6 +46,7 @@ const projects = [
     title: "bend.com",
     description:
       "Owned AI, social, and backend feature work for one of the world's most popular stretching apps.",
+    href: "https://www.bend.com",
     tags: ["AI", "Backend", "Product"],
     visualStyle: {
       backgroundImage: "url('/bend-composite-phone-opposite-corner-yinyang.png')",
