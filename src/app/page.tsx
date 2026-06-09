@@ -454,6 +454,15 @@ export default function Home() {
             >
               <Linkedin aria-hidden="true" />
             </a>
+            <a
+              aria-label="Instagram"
+              className={buttonVariants({ variant: "secondary", size: "icon" })}
+              href="https://www.instagram.com/danoflondon?igsh=MXB3bWpydG8xYjFkYQ%3D%3D&utm_source=qr"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Instagram aria-hidden="true" />
+            </a>
           </div>
         </div>
       </footer>
