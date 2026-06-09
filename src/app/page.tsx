@@ -337,7 +337,12 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col justify-center">
                     <CardHeader>
-                      <CardTitle className="inline-flex items-center gap-1.5 transition group-hover:text-foreground group-hover:underline group-hover:underline-offset-4">
+                      <CardTitle
+                        className={cn(
+                          "inline-flex items-center gap-1.5 transition group-hover:text-foreground",
+                          hasHref ? "group-hover:font-medium" : null,
+                        )}
+                      >
                         {project.title}
                         {hasHref ? (
                           <ArrowUpRight

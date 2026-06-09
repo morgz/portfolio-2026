@@ -445,9 +445,7 @@ export function EntreeCarousel({ entrees }: { entrees: Entree[] }) {
                     <CardTitle
                       className={cn(
                         "inline-flex items-center gap-1.5 transition group-hover:text-foreground",
-                        entree.href
-                          ? "group-hover:underline group-hover:underline-offset-4"
-                          : null,
+                        entree.href ? "group-hover:font-medium" : null,
                       )}
                     >
                       <EntreeTitle title={entree.title} />
