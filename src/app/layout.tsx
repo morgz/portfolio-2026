@@ -13,8 +13,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Daniel Morgan - Portfolio",
-  description: "A focused portfolio for selected work, writing, and contact.",
+  title: "Daniel Morgan - Product Engineer & Designer",
+  description:
+    "Portfolio of Daniel Morgan, a product engineer and designer building iOS apps, full-stack products, AI experiments, and audio-first experiences.",
+  authors: [{ name: "Daniel Morgan" }],
+  creator: "Daniel Morgan",
+  keywords: [
+    "Daniel Morgan",
+    "product engineer",
+    "product designer",
+    "iOS",
+    "full-stack",
+    "AI",
+    "portfolio",
+  ],
+  openGraph: {
+    title: "Daniel Morgan - Product Engineer & Designer",
+    description:
+      "Selected iOS, full-stack, AI, and audio-first product work by Daniel Morgan.",
+    siteName: "Daniel Morgan",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Daniel Morgan - Product Engineer & Designer",
+    description:
+      "Selected iOS, full-stack, AI, and audio-first product work by Daniel Morgan.",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

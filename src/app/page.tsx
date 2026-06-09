@@ -448,9 +448,11 @@ export default function Home() {
               <Mail aria-hidden="true" />
             </a>
             <a
+              aria-label="LinkedIn"
               className={buttonVariants({ variant: "secondary", size: "icon" })}
               href="https://www.linkedin.com/in/daniel-morgan-london"
-              aria-label="LinkedIn"
+              rel="noreferrer"
+              target="_blank"
             >
               <Linkedin aria-hidden="true" />
             </a>
